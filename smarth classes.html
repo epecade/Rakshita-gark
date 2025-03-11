@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Smarth Classes by Rakshita Garg, offering quality education to over 100 students with an average score of 85-90%.">
+    <title>Smarth Classes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://cdn.discordapp.com/attachments/1344539769211977758/1348978296771186738/4d4a2accdefe510117341279609d675d.jpg?ex=67d16d70&is=67d01bf0&hm=40ea7de1d510224385cc09c76002a17c4288592577edf7f7e87fc1319a277be9');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            line-height: 1.6;
+            background-attachment: fixed;
+            text-align: center;
+            animation: fadeIn 2s ease-out;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: rgba(44, 62, 80, 0.8);
+            border-radius: 15px;
+            margin: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(100px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            font-style: italic;
+            color: #ECF0F1;
+        }
+
+        .quote {
+            text-align: center;
+            font-size: 1.6rem;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgba(44, 62, 80, 0.7);
+            border-radius: 15px;
+            width: 80%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            color: #F39C12;
+            animation: pulseGlow 3s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 25px rgba(243, 156, 18, 0.8); }
+            100% { box-shadow: 0 0 40px rgba(243, 156, 18, 1); }
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding-top: 40px;
+        }
+
+        section {
+            background-color: rgba(44, 62, 80, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .stats {
+            margin-top: 30px;
+            padding: 0 10px;
+        }
+
+        .stats div {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: rgba(243, 156, 18, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .stats div:hover {
+            background-color: rgba(243, 156, 18, 0.3);
+            transform: scale(1.05);
+        }
+
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .contact-info ul li {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ECF0F1;
+        }
+
+        .contact-info ul li a {
+            color: #F39C12;
+            text-decoration: none;
+        }
+
+        .profile-image {
+            margin-top: 30px;
+            text-align: center;
+            animation: fadeInUp 2.5s ease-out;
+        }
+
+        .profile-image img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            background-color: #2C3E50;
+            color: white;
+            padding: 15px 0;
+            font-size: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #F39C12;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .stats div {
+                width: 100%;
+            }
+        }
+
+        /* Particle animation styles */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 8px;
+            height: 8px;
+            animation: moveParticles 6s infinite;
+        }
+
+        @keyframes moveParticles {
+            0% {
+                transform: translate3d(0, 0, 0);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translate3d(50px, 100px, 0);
+                opacity: 1;
+            }
+            100% {
+                transform: translate3d(100px, 200px, 0);
+                opacity: 0.5;
+            }
+        }
+
+        /* Create multiple particles using JavaScript */
+        .particles-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Smarth Classes</h1>
+    <p>Helping students excel with personalized learning.</p>
+</header>
+
+<div class="quote">
+    <p>"The future belongs to those who believe in the beauty of their dreams." – Eleanor Roosevelt</p>
+</div>
+
+<div class="container">
+    <section class="profile-image">
+        <img src="https://cdn.discordapp.com/attachments/1344539769211977758/1348969952836849704/IMG-20250311-WA0050.jpg?ex=67d165ab&is=67d0142b&hm=55d0701f0b0306c64070e0d0f66deca7d50702fe35421adea607ede2b1d6865f&" alt="Rakshita Garg">
+    </section>
+
+    <section>
+        <h2>About Us</h2>
+        <p>Smarth Classes, founded by Rakshita Garg, offers top-tier educational services. With over 100 students and an average score of 85-90%, our goal is to shape the future of education by providing personalized and effective learning experiences.</p>
+    </section>
+
+    <section class="stats">
+        <h2>Our Stats</h2>
+        <div><strong>100+ Students</strong></div>
+        <div><strong>Average Score: 85-90%</strong></div>
+    </section>
+
+    <section class="contact-info">
+        <h2>Contact Us</h2>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:rakshita.gautam21@gmail.com">rakshita.gautam21@gmail.com</a></li>
+            <li><strong>Instagram:</strong> <a href="https://www.instagram.com/rakshitagarg_21/">rakshitagarg_21</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+919212549537">+91 92125 49537</a></li>
+        </ul>
+    </section>
+</div>
+
+<footer>
+    <p>Smarth Classes &copy; 2025</p>
+</footer>
+
+<!-- Particle animation container -->
+<div class="particles-container"></div>
+
+<script>
+    // Particle animation script
+    const particleContainer = document.querySelector('.particles-container');
+
+    function createParticle() {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        const size = Math.random() * 5
